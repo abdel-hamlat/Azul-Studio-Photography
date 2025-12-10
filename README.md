@@ -51,7 +51,7 @@ The site includes a fullscreen hero slider, dynamic gallery layout, pricing & de
 
 
 Azul-Studio-Photography/
-│── index.html                ##
+│── index.html
 │── styles.css
 │── script.js
 │── images/
