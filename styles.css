@@ -1,0 +1,193 @@
+:root {
+  --bg: #000;
+  --bg-alt: #111;
+  --text: #fff;
+  --muted: #bbb;
+  --accent: #f0b35a;
+  --accent-soft: rgba(240,179,90,0.15);
+  --border: #333;
+  --success: #3ddc97;
+  --error: #ff5a5f;
+  --shadow: 0 16px 40px rgba(0,0,0,.7);
+  --max-width: 1100px;
+  --font-main: Arial, sans-serif;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body {background:#000;color:#fff;font-family:var(--font-main);}
+
+/* NAVBAR */
+.navbar {
+  position: sticky; top: 0;
+  padding: 1rem 2rem;
+  background: #000;
+  border-bottom: 1px solid #222;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo { letter-spacing: .22em; font-size: .9rem; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a{
+  color:#fff;text-decoration:none;font-size:.85rem;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+.nav-toggle{display:none;}
+
+/* HERO — like Kayfield: wide banner, cropped nicely */
+.hero { position:relative; width:100%; overflow:hidden; }
+
+.hero-slider {
+  width:100%;
+  height:100vh;
+  min-height:380px;
+  background:#000;
+}
+
+.hero-slider img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:1;
+  transition:opacity 1s ease-in-out;
+}
+
+/* HERO OVERLAY */
+.hero-overlay {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  justify-content:flex-end; align-items:center;
+  padding-bottom:2.8rem;
+  text-align:center;
+  background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.1),transparent);
+}
+.hero-overlay h1 {
+  font-size:clamp(2rem,3vw,3rem);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.hero-overlay p {
+  margin:.6rem 0 1.2rem;
+  color:var(--muted);
+  letter-spacing:.1em;
+}
+
+/* BUTTONS */
+.btn {
+  padding:.55rem 1.4rem;
+  border-radius:999px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+}
+.btn-primary { background:var(--accent); color:#000; font-weight:bold; }
+.btn-primary:hover { background:#ffcd7a; }
+
+/* SECTIONS */
+.section { max-width:var(--max-width); margin:3rem auto; padding:0 1.3rem; }
+.section-header { text-align:center; margin-bottom:1.7rem; }
+.section-header h2 { letter-spacing:.15em; text-transform:uppercase; }
+
+/* ⭐ SCROLL OFFSET FIX — prevents navbar overlap ⭐ */
+section {
+  scroll-margin-top: 90px; /* Adjust between 70px–120px if needed */
+}
+
+/* GALLERY */
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:.9rem;
+}
+.gallery-grid img {
+  width:100%; height:240px; object-fit:cover; border-radius:6px;
+}
+
+/* DEALS */
+.section-alt { background:var(--bg-alt); padding:2rem; border-radius:14px; }
+.deals-grid {
+  display:grid; gap:1.4rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.deal-card {
+  background:#000;border:1px solid var(--border);
+  padding:1.3rem; border-radius:12px;
+}
+.price {margin:.6rem 0 1rem;}
+.old-price{text-decoration:line-through;color:var(--muted);}
+
+/* PROMO */
+.promo-box{
+  background:var(--accent-soft);
+  border:1px solid rgba(240,179,90,.4);
+  padding:1.4rem; border-radius:12px; text-align:center;
+  margin-top:1.5rem;
+}
+.promo-form{display:flex;justify-content:center;gap:.8rem;margin-top:.8rem;}
+.promo-form input{
+  padding:.6rem .8rem;border-radius:999px;border:1px solid var(--border);
+  background:#000;color:#fff;
+}
+.promo-message,.promo-price{margin-top:.4rem;font-size:.9rem;}
+
+/* CONTACT */
+.contact-layout {
+  display:grid;grid-template-columns:1fr 1fr;gap:2rem;
+}
+.contact-form,.contact-info {
+  background:#000; border:1px solid var(--border);
+  padding:1.4rem; border-radius:12px;
+}
+.form-row{margin-bottom:1rem;display:flex;flex-direction:column;}
+.form-row input,.form-row textarea{
+  background:#0c0c0c;border:1px solid var(--border);
+  padding:.6rem .8rem;border-radius:8px;color:#fff;
+}
+
+/* DATE INPUT CUSTOM STYLING */
+input[type="date"] {
+  background:#0c0c0c;
+  border:1px solid var(--border);
+  padding:.6rem .8rem;
+  border-radius:8px;
+  color:#fff;
+  width:100%;
+  font-size:1rem;
+}
+
+/* make the calendar icon visible on dark background */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.form-status{margin-top:.5rem;font-size:.9rem;}
+
+.social-links a{color:var(--accent);text-decoration:none;}
+.social-links a:hover{text-decoration:underline;}
+
+/* FOOTER */
+.footer {
+  text-align:center;
+  padding:1.6rem;
+  color:var(--muted);
+  border-top:1px solid #111;
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .navbar{padding:1rem;}
+  .nav-links{
+    position:absolute; right:1rem; top:3.2rem;
+    background:#000; border:1px solid #222;
+    border-radius:8px; padding:.6rem .9rem;
+    flex-direction:column; gap:.6rem;
+    display:none;
+  }
+  .nav-links.show{display:flex;}
+  .nav-toggle{display:block;background:none;border:none;color:#fff;font-size:1.3rem;}
+  .contact-layout{grid-template-columns:1fr;}
+}
+@media (max-width: 600px){
+  .hero-slider{height:55vh;min-height:320px;}
+}
