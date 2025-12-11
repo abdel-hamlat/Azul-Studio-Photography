@@ -88,7 +88,7 @@ QA Automation Engineer
 💻 **GitHub:** https://github.com/abdel-hamlat  
 
 ---
-
 ## 📝 License
 This project is for portfolio & educational use.  
+
 
