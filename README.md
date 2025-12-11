@@ -8,6 +8,9 @@ The site includes a fullscreen hero slider, dynamic gallery layout, pricing & de
 ## ✨ Designed & Engineered by **Abdelhalim Hamlat**
 
 ---
+## 🌐 Live Demo
+
+👉 https://abdel-hamlat.github.io/Azul-Studio-Photography/
 
 ## 🚀 Features
 
@@ -60,13 +63,6 @@ Azul-Studio-Photography/
 │ ├── gallery2.jpg
 │ └── ...
 
-
-
----
-
-## 🌐 Live Demo
-
-👉 https://yourusername.github.io/your-repo-name/
 
 ---
 
